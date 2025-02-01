@@ -6,7 +6,7 @@ import 'quiz_page.dart';
 class ResultPage extends StatelessWidget {
   final int result;
 
-  const ResultPage(this.result, {super.key});
+  const ResultPage(this.result);
 
   @override
   Widget build(BuildContext context) {

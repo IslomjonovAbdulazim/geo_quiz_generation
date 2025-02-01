@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'country_model.dart';
 
+
 class QuestionModel {
   late String country;
   late List<String> variants;
@@ -25,7 +26,9 @@ List<QuestionModel> generateQuestions() {
 
     Set<String> variants = {correctCountry.name};
     while (variants.length < 4) {
-      variants.add(countries[random.nextInt(countries.length)].name);
+      int rNumber = random.nextInt(countries.length);
+      String rCountry = countries[rNumber].name;
+      variants.add(rCountry);
     }
 
     List<String> shuffledVariants = variants.toList();
